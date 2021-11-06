@@ -6,7 +6,7 @@ navbar:
     - text: "Resume"
       href: about.html
     - text: "Problem 2"
-      href: dashboard.html
+      href: plots.html
     - icon: fa-envelope fa-lg
       href: mailto:<yc4018@columbia.edu>
     - icon: fa-github fa-lg

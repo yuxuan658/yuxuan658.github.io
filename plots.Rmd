@@ -1,0 +1,85 @@
+---
+title: "Problem 2"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+    source: embed
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(tidyverse)
+library("p8105.datasets")
+library(plotly)
+```
+
+```{r}
+data("instacart")
+aisle_obs = 
+  instacart %>%
+  group_by(aisle) %>% 
+  summarize(n_obs = n())
+```
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A: Barplot
+
+```{r}
+# Barplot that shows the number of items ordered in each aisle, which with more than 10000 items ordered.    
+
+aisle_obs %>% 
+  filter(n_obs > 10000) %>% 
+  mutate(
+    aisle = fct_reorder(aisle, n_obs),
+    text_label = str_c("Aisle:", aisle, "\nNumber of Ordered:", n_obs)) %>% 
+  plot_ly(
+    x = ~aisle, y = ~n_obs, color = ~aisle, text = ~text_label, colors = "viridis",
+    type = "bar", mode = "markers") %>% 
+  layout(
+    title = "The Number of Items Ordered In Each Aisle",
+    xaxis = list(title = "Aisle"),
+    yaxis = list(title = "Number of items")
+  )
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B: Scatterplot
+
+```{r}
+# Scatterplot of number of reorder in each department
+
+instacart %>% 
+  select(reordered, department) %>% 
+  count(department) %>%  
+  mutate(department = fct_reorder(department, n)) %>% 
+  plot_ly(x = ~department, y = ~n, color = ~department,
+          type = "scatter", colors = "viridis") %>% 
+  layout(
+   title = "Number of Reorder in Each Department",
+   xaxis = list(title = "Number of Reordered"),
+   yaxis = list(title = "Department")
+)
+```
+
+### Chart C: Boxplot
+
+```{r}
+# Boxplot that shows the distribution of hour of the day on each day of the week
+
+instacart %>% 
+  sample_n(7000) %>% 
+  mutate(
+    order_dow = lubridate::wday(order_dow + 1, label = TRUE, abbr = FALSE)) %>% 
+  plot_ly(x = ~order_dow, y = ~order_hour_of_day, color = ~order_dow,
+          type = "box", colors = "viridis") %>% 
+    layout(
+   title = "The Distribution of Hour of the Day",
+   xaxis = list(title = "Each Day of the Week"),
+   yaxis = list(title = "Hour of the Day on which the Order Was Placed")
+)
+```
+
