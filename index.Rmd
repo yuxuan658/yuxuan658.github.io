@@ -7,26 +7,25 @@ output:
     theme: flatly
 ---
 
-## This is my awesome website
+### Hello, Hello~ This is my awesome website!
 My name is Yuxuan chen. I am a first year student at Columbia University, majoring in biostatistics. 
 
 I am also a student in p8105 Data Science. You can find the course website here: [P8105](https://www.p8105.com)
 
-## Here is my resumn page:
+### Here is my resumn page:
 You can find more about my academic and professional experience here: 
 [Resume](about.html)
 
 
-## Learn more about me:
+### Learn more about me:
 * Link to [My Github](https://github.com/yuxuan658)
 * Link to [My linkedin](https://www.linkedin.com/in/yuxuan-claire-chen)
 
-Links in the site navigation for your GitHub account, your email, and other professional networks.
-
-## Problem 2
+### Problem 2
 
 This is a flexdashboard that includes some plots by using plotly and the `instacart` dataset loaded from the `p8105.datasets` package: [Problem 2](plots.html) 
 
 Thanks for visiting! o( ❛ᴗ❛ )o     
 
 ![](image/thanks_for_watching.jpg)
+

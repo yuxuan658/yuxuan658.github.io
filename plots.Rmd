@@ -6,6 +6,7 @@ output:
     vertical_layout: fill
     source: embed
 ---
+Back to the [Home page](index.html)
 
 ```{r setup, include=FALSE}
 library(flexdashboard)
@@ -53,22 +54,22 @@ Column {data-width=350}
 # Scatterplot of number of reorder in each department
 
 instacart %>% 
-  select(reordered, department) %>% 
+  filter(reordered == 1) %>% 
   count(department) %>%  
   mutate(department = fct_reorder(department, n)) %>% 
   plot_ly(x = ~department, y = ~n, color = ~department,
           type = "scatter", colors = "viridis") %>% 
   layout(
    title = "Number of Reorder in Each Department",
-   xaxis = list(title = "Number of Reordered"),
-   yaxis = list(title = "Department")
+   xaxis = list(title = "Department"),
+   yaxis = list(title = "Number of Reordered")
 )
 ```
 
 ### Chart C: Boxplot
 
 ```{r}
-# Boxplot that shows the distribution of hour of the day on each day of the week
+# Boxplot that shows the distribution of hour of the day on which the order was placed on each day of the week by randomly selecting 7000 data.
 
 instacart %>% 
   sample_n(7000) %>% 
@@ -77,7 +78,7 @@ instacart %>%
   plot_ly(x = ~order_dow, y = ~order_hour_of_day, color = ~order_dow,
           type = "box", colors = "viridis") %>% 
     layout(
-   title = "The Distribution of Hour of the Day",
+   title = "Distribution of Hour of the Day",
    xaxis = list(title = "Each Day of the Week"),
    yaxis = list(title = "Hour of the Day on which the Order Was Placed")
 )
