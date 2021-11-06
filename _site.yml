@@ -1,0 +1,19 @@
+name: "Yay internet!"
+output_dir: "."
+navbar:
+  title: "Home"
+  right:
+    - text: "Resume"
+      href: about.html
+    - text: "Problem 2"
+      href: dashboard.html
+    - icon: fa-envelope fa-lg
+      href: mailto:<yc4018@columbia.edu>
+    - icon: fa-github fa-lg
+      href: https://github.com/yuxuan658
+    - icon: fab fa-linkedin
+      href: https://www.linkedin.com/in/yuxuan-claire-chen
+      
+output:
+  html_document:
+    theme: flatly

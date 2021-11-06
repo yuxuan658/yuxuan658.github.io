@@ -1,0 +1,16 @@
+---
+title: "Yuxuan's Website"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: flatly
+---
+
+## This is my awesome website
+My name is Yuxuan chen. I am a first year student at Columbia University, majoring in biostatistics. 
+
+I am also a student in p8105 Data Science. You can find the course website here: [P8105](https://www.p8105.com)
+
+## Here is my resumn page:
+You can find more about my academic and professional experience here: 

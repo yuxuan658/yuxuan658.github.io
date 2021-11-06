@@ -1,0 +1,39 @@
+---
+title: "About me"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: flatly
+---
+
+This page has information about my academic and professional experience:
+
+### EDUCATION
+**Columbia University**   	
+Sept 2021 – Present  
+Master of Science in Biostatistics (Statistical Genetics track)  
+
+**University of California, Davis**   	
+Sept 2017 - June 2021     
+Bachelor of Science in Biochemistry and Molecular Biology    
+Minor in Statistics	   
+
+### PROFESSIONAL EXPERIENCE 
+**Undergraduate Researcher**, CBS Dean’s Circle Summer Undergraduate Research, UC Davis
+PI: Professor Philip Zerbe, Funding Source Khaira Family Experiential Learning Fund
+University of California, Davis 
+June 2020 – August 2020
+
+Study of the Role of Terpene Metabolites on Microbial Communities in the Switchgrass Root System Under Drought and Well-Watered Conditions	 
+
+
+**Research Assistant**, The Phillip Zerbe Lab, UC Davis	                                                                
+University of California, Davis, PI: Professor Philip Zerbe
+University of California, Davis 
+April 2019 – June 2021
+
+Functional Characterization of Five P450 in Switchgrass CYP71Z25-29
+Research of terpenoid metabolism and bioactivity in maize and switchgrass, including but not limited to E. coli co-expression assays, metabolite profiling, and transcriptome profiling. Prepare for protein crystallization, currently working on experiment condition optimization.
+
+Back to [home](index.html) page.
