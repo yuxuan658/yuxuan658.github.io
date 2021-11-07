@@ -80,7 +80,7 @@ instacart %>%
     layout(
    title = "Distribution of Hour of the Day",
    xaxis = list(title = "Each Day of the Week"),
-   yaxis = list(title = "Hour of the Day on which the Order Was Placed")
+   yaxis = list(title = "Hour of the Day")
 )
 ```
 
